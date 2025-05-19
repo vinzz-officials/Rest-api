@@ -1,29 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelector("#apiList").addEventListener("click", async function(e) {
-    const target = e.target;
-    if (target.classList.contains("btn") && target.href.includes("?")) {
-      e.preventDefault(); // cegah halaman reload
-      
-      document.getElementById("loadingIndicator").style.display = "block";
 
-      try {
-        // Ambil URL tujuan dari tombol
-        const url = target.href;
-
-        // Fetch data dari URL tombol
-        const res = await fetch(url);
-        const data = await res.json();
-
-        // Tampilkan ke halaman
-        document.getElementById("pageContent").innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
-      } catch (err) {
-        document.getElementById("pageContent").innerHTML = `<pre style="color:red">Gagal mengambil data:\n${err}</pre>`;
-      } finally {
-        document.getElementById("loadingIndicator").style.display = "none";
-      }
-    }
-  });
-});
 function toggleDrawer() {
   const drawer = document.getElementById("drawer");
   drawer.style.left = drawer.style.left === "0px" ? "-250px" : "0px";
