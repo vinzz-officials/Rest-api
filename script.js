@@ -17,17 +17,19 @@ const params = new URLSearchParams(window.location.search);
 const page = document.getElementById("pageContent");
 
 function renderResult(feature, response, text = '') {
-  page.innerHTML = `<pre>${JSON.stringify({
+  const result = {
     status: true,
     creator: "Vinzz official",
     feature,
     ...(text && { text }),
     response
-  }, null, 2)}</pre>`;
+  };
+  page.textContent = JSON.stringify(result, null, 2); // tampilkan JSON murni
 }
 
 function renderError() {
-  page.innerHTML = `<pre>${JSON.stringify({ status: false, message: 'Gagal merespon, mohon muat ulang' }, null, 2)}</pre>`;
+  const error = { status: false, message: 'Gagal merespon, mohon muat ulang' };
+  page.textContent = JSON.stringify(error, null, 2); // tampilkan JSON murni
 }
 
 if (params.has("ffstalk") && params.get("id")) {
