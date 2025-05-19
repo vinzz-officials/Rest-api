@@ -83,36 +83,6 @@ pre {
 .beta { background: #fb8c00; }
 .offline { background: #ff0000; }
 
-#drawer {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background: #fff;
-  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
-  padding: 20px;
-  transition: 0.3s;
-  z-index: 1000;
-}
-#drawer ul {
-  list-style: none;
-  padding: 0;
-}
-#drawer a {
-  display: block;
-  padding: 10px 0;
-  color: #1565c0;
-}
-
-#drawerBtn {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1100;
-  background: none;
-  border: none;
-}
 
 #loadingIndicator {
   display: none;
