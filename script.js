@@ -24,12 +24,7 @@ function renderResult(feature, response, text = '') {
     ...(text && { text }),
     response
   };
-  page.textContent = JSON.stringify(result, null, 2); // tampilkan JSON murni
-}
-
-function renderError() {
-  const error = { status: false, message: 'Gagal merespon, mohon muat ulang' };
-  page.textContent = JSON.stringify(error, null, 2); // tampilkan JSON murni
+  document.documentElement.innerHTML = JSON.stringify(result, null, 2); // ganti seluruh halaman
 }
 
 if (params.has("ffstalk") && params.get("id")) {
