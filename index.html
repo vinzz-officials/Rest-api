@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple API</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="drawer">
+    <h3>Navigation</h3>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="#creator">Creator</a></li>
+      <li><a href="#support">Support Me</a></li>
+    </ul>
+  </div>
+
+  <button onclick="toggleDrawer()" id="drawerBtn">
+    <svg width="28" height="28" fill="#1565c0" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
+
+  <h1>Simple API List</h1>
+
+  <div id="loadingIndicator">
+    <div class="spinner"></div>
+    <p>Memuat data, mohon tunggu...</p>
+  </div>
+
+  <div id="pageContent"></div>
+
+  <div id="apiList">
+    <h2>Stalker APIs</h2>
+    <div class="card">
+      <div><b>ffstalk</b> | <span class="badge offline">offline</span></div>
+      <a class="btn" href="?ffstalk&id=12345678">GET API</a>
+    </div>
+    <div class="card">
+      <div><b>ttstalk</b> | <span class="badge online">online</span></div>
+      <a class="btn" href="?ttstalk&user=vinzz_hosting">GET API</a>
+    </div>
+
+    <h2>AI Features</h2>
+    <div class="card">
+      <div><b>Open ai</b> | <span class="badge beta">Beta</span></div>
+      <a class="btn" href="?ai&text=halo">GET API</a>
+    </div>
+
+    <h2>Downloaders</h2>
+    <div class="card">
+      <div><b>sfile</b> | <span class="badge online">online</span></div>
+      <a class="btn" href="?sfile&link=https://sfile.mobi/4MJIjvGqTmi">GET API</a>
+    </div>
+    <div class="card">
+      <div><b>mediafire</b> | <span class="badge online">online</span></div>
+      <a class="btn" href="?mediafire&linkmf=https://www.mediafire.com/file/1iu7hqs377e96uf/qioV19(Beal).zip/file">GET API</a>
+    </div>
+
+    <h2>Tools</h2>
+    <div class="card">
+      <div><b>subdo</b> | <span class="badge online">online</span></div>
+      <a class="btn" href="?subdo&domain=vinzz.my.id">GET API</a>
+    </div>
+  </div>
+
+  <!-- Creator Section -->
+  <section id="creator">
+    <h2>Creator</h2>
+    <div class="card">
+      <div><p>Hubungi saya<br> jika ada bug atau request fitur.</p></div>
+      <a class="btn" href="https://wa.me/6283197848916" target="_blank">Chat via WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Support Me Section -->
+  <section id="support">
+    <h2>Support Me</h2>
+    <div class="card">
+      <div><p>Bantu support pengembangan API ini dengan join channel saya.</p></div>
+      <a class="btn" href="https://whatsapp.com/channel/0029Vb69Jnf7j6g5NsYr6J29" target="_blank">Join My Channel</a>
+    </div>
+  </section>
+
+  <footer>©Vinzz official</footer>
+
+  <script src="script.js"></script>
+</body>
+      </html
