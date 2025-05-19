@@ -1,4 +1,3 @@
-
 function toggleDrawer() {
   const drawer = document.getElementById("drawer");
   drawer.style.left = drawer.style.left === "0px" ? "-250px" : "0px";
@@ -17,14 +16,17 @@ const params = new URLSearchParams(window.location.search);
 const page = document.getElementById("pageContent");
 
 function renderResult(feature, response, text = '') {
-  const result = {
+  page.innerHTML = `<pre>${JSON.stringify({
     status: true,
     creator: "Vinzz official",
     feature,
     ...(text && { text }),
     response
-  };
-  document.documentElement.innerHTML = JSON.stringify(result, null, 2); // ganti seluruh halaman
+  }, null, 2)}</pre>`;
+}
+
+function renderError() {
+  page.innerHTML = `<pre>${JSON.stringify({ status: false, message: 'Gagal merespon, mohon muat ulang' }, null, 2)}</pre>`;
 }
 
 if (params.has("ffstalk") && params.get("id")) {
@@ -111,4 +113,4 @@ else if (params.has("mediafire") && params.get("linkmf")) {
       hideLoading();
       renderError();
     });
-    }
+}
